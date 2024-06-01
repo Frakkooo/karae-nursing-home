@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karae Nursing Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #005fa3;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            flex: 1 1 auto;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #004a85;
+        }
+        .container {
+            padding: 2em;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            display: none;
+            background-color: white;
+            padding: 2em;
+            margin-bottom: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section.active {
+            display: block;
+        }
+        footer {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .social-icons {
+            margin-top: 1em;
+        }
+        .social-icons a {
+            margin: 0 0.5em;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .contact-info {
+            margin-top: 1em;
+        }
+        .home-intro {
+            text-align: center;
+            background-color: #007acc;
+            color: white;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+        .home-intro h2 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            overflow-x: auto;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.5em;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                padding: 0.5em;
+            }
+            .container {
+                padding: 1em;
+            }
+            .section {
+                padding: 1em;
+            }
+            table, th, td {
+                font-size: 0.9em;
+                padding: 0.3em;
+            }
+        }
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 0.5em;
+                border-top: 1px solid #004a85;
+            }
+            nav a:first-child {
+                border-top: none;
+            }
+            .home-intro {
+                padding: 1em;
+            }
+            table {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Karae Nursing Home</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('mission')">Mission</a>
+        <a href="#" onclick="showSection('vision')">Vision</a>
+        <a href="#" onclick="showSection('departments')">Departments</a>
+        <a href="#" onclick="showSection('doctors')">Doctors & Staff</a>
+        <a href="#" onclick="showSection('services')">Services</a>
+        <a href="#" onclick="showSection('resources')">Patient Resources</a>
+        <a href="#" onclick="showSection('testimonials')">Testimonials</a>
+        <a href="#" onclick="showSection('news')">News & Events</a>
+        <a href="#" onclick="showSection('careers')">Careers</a>
+        <a href="#" onclick="showSection('faq')">FAQ</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+    </nav>
+    <div class="container">
+        <div id="home" class="section active">
+            <div class="home-intro">
+                <h2>Welcome to Karae Nursing Home</h2>
+                <p>Your health is our priority. We provide comprehensive healthcare services with a commitment to excellence and compassion.</p>
+            </div>
+        </div>
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>Karae Nursing Home was established with the aim of providing high-quality healthcare services to the community. Our intention is to offer compassionate care through our dedicated team of professionals and state-of-the-art facilities.</p>
+        </div>
+        <div id="mission" class="section">
+            <h2>Our Mission</h2>
+            <p>To deliver compassionate and quality healthcare services to all patients through innovation and excellence.</p>
+        </div>
+        <div id="vision" class="section">
+            <h2>Our Vision</h2>
+            <p>To be a leading healthcare provider recognized for exceptional patient care and commitment to the community.</p>
+        </div>
+        <div id="departments" class="section">
+            <h2>Departments</h2>
+            <ul>
+                <li>Reception</li>
+                <li>Doctor's Office</li>
+                <li>MCH (Maternal and Child Health)</li>
+                <li>Pharmacy</li>
+                <li>Administrator Office</li>
+                <li>NHIF Office</li>
+                <li>Laboratory</li>
+                <li>Labour Room</li>
+                <li>Theatre</li>
+                <li>Wards</li>
+            </ul>
+        </div>
+        <div id="doctors" class="section">
+            <h2>Doctors & Staff</h2>
+            <p>Meet our team of dedicated and experienced professionals committed to providing excellent healthcare.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Responsibilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Samuel Mokaya</td>
+                        <td>Administrator</td>
+                        <td>
+                            <ul>
+                                <li>Oversees daily operations of the hospital</li>
+                                <li>Manages hospital staff and resources</li>
+                                <li>Ensures compliance with healthcare regulations</li>
+                                <li>Develops and implements hospital policies</li>
+                                <li>Coordinates with other departments to improve patient care</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <!-- Add more staff members here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="services" class="section">
+            <h2>Services</h2>
+            <p>We offer a wide range of healthcare services, including:</p>
+            <ul>
+                <li>General Consultation</li>
+                <li>Specialist Consultation</li>
+                <li>Maternity Services</li>
+                <li>Laboratory Services</li>
+                <li>Pharmacy Services</li>
+                <li>Minor and Major Surgeries</li>
+                <li>Inpatient Care</li>
+                <li>Outpatient Services</li>
+                <li>Vaccination Programs</li>
+            </ul>
+        </div>
+        <div id="resources" class="section">
+            <h2>Patient Resources</h2>
+            <p>Useful information for our patients, including forms, insurance details, and patient rights.</p>
+            <!-- Add patient resources information here -->
+        </div>
+        <div id="testimonials" class="section">
+            <h2>Testimonials</h2>
+            <p>Read what our patients have to say about their experiences at Karae Nursing Home.</p>
+            <!-- Add patient testimonials here -->
+        </div>
+        <div id="news" class="section">
+            <h2>News & Events</h2>
+            <p>Stay updated with the latest news and events from Karae Nursing Home.</p>
+            <!-- Add news and events information here -->
+        </div><div id="careers" class="section">
+            <h2>Careers</h2>
+            <p>Join our team. Explore current job openings and career opportunities at Karae Nursing Home.</p>
+            <!-- Add career information and job listings here -->
+        </div>
+        <div id="faq" class="section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <p>Find answers to the most commonly asked questions about our services and facilities.</p>
+            <!-- Add FAQ information here -->
+        </div>
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>For more information or to book an appointment, please contact us through:</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:karaeN@gmail.com">karaeN@gmail.com</a></p>
+                <p>Phone: <a href="tel:+0700999999">0700 999 999</a></p>
+            </div>
+            <div class="social-icons">
+                <a href="https://wa.me/0700999999" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Karae Nursing Home. Designed by Frankline Ogise.</p>
+    </footer>
+</body>
+</html>
